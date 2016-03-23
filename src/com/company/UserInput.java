@@ -12,6 +12,9 @@ public class UserInput {
         String name = reader.nextLine();
         System.out.println("Hello, " + name);
 
-        // New console reader (for different data type)
+        // Use Integer.parseInt to get integer from reader String
+        System.out.println("Type an integer: ");
+        int userNumber = Integer.parseInt(reader.nextLine());
+        System.out.println(userNumber + "+ 4 = " + (userNumber + 4));
     }
 }
