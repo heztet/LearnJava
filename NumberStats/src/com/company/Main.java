@@ -19,6 +19,9 @@ public class Main {
         int userNum = 0;
         while (userNum != -1) {
             userNum = Integer.parseInt(reader.nextLine());
+            if (userNum == -1) {
+                break;
+            }
             stats.addNumber(userNum);
             // Add number to even or odd tracker
             if (userNum % 2 == 0) {
