@@ -17,11 +17,25 @@ public class LyyraCard {
 
     // Log payment of economical meal (2.50 euros)
     public void payEconomical() {
-        this.balance -= 2.5;
+        if ( this.balance >= 2.5 ) {
+            this.balance -= 2.5;
+        }
     }
 
     // Log payment of gourmet meal (4 euros)
     public void payGourmet() {
-        this.balance -= 4;
+        if ( this.balance >= 4 ) {
+            this.balance -= 4;
+        }
+    }
+
+    // Add money to LyyraCard (with a max of 150 euros, min of 0)
+    public void loadMoney(double amount) {
+        if ( amount > 150 ) {
+            amount = 150;
+        } else if ( amount < 0 ) {
+            amount = 0;
+        }
+        this.balance += amount;
     }
 }
