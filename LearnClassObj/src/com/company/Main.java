@@ -6,17 +6,12 @@ public class Main {
         Person bob = new Person("Bob");
         Person andy = new Person("Andy");
 
-        // Make bob 30 years old
-        int i = 0;
-        while ( i < 30 ) {
-            bob.becomeOlder();
-            i++;
-        }
+        bob.setHeight(180);
+        bob.setWeight(86);
+        andy.setHeight(175);
+        andy.setWeight(64);
 
-        // Make andy 1 year old
-        andy.becomeOlder();
-
-        System.out.println( andy );     // Same as sout( andy.toString() )
-        System.out.println( bob );
+        System.out.println(bob.getName() + ", BMI of " + bob.bodyMassIndex());
+        System.out.println(andy.getName() + ", BMI of " + andy.bodyMassIndex());
     }
 }
