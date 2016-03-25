@@ -16,22 +16,7 @@ public class Main {
         // Make andy 1 year old
         andy.becomeOlder();
 
-        System.out.println("");
-
-        if ( andy.isAdult() ) {
-            System.out.printf("Adult: ");
-            andy.printPerson();
-        } else {
-            System.out.printf("Minor: ");
-            andy.printPerson();
-        }
-
-        if ( bob.isAdult() ) {
-            System.out.printf("Adult: ");
-            bob.printPerson();
-        } else {
-            System.out.printf("Minor: ");
-            bob.printPerson();
-        }
+        System.out.println( andy );     // Same as sout( andy.toString() )
+        System.out.println( bob );
     }
 }
