@@ -3,15 +3,13 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Person bob = new Person("Bob");
-        Person andy = new Person("Andy");
-
-        bob.setHeight(180);
+        Person bob = new Person("Bob", 24);
         bob.setWeight(86);
-        andy.setHeight(175);
-        andy.setWeight(64);
+        bob.setHeight(180);
 
-        System.out.println(bob.getName() + ", BMI of " + bob.bodyMassIndex());
-        System.out.println(andy.getName() + ", BMI of " + andy.bodyMassIndex());
+        WeightWatchersAssociation x = new WeightWatchersAssociation(25);
+        System.out.println(x.isAcceptedAsMember(bob));
+
+
     }
 }

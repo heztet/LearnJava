@@ -6,9 +6,16 @@ public class Person {
     private int weight;
     private int height;
 
+    // Person constructor with just name
     public Person(String initialName) {
-        this.age = 0;
+        // Run other constructor with name parameter with age of 0
+        this(initialName, 0);
+    }
+
+    // Person constructor with name and age
+    public Person(String initialName, int age) {
         this.name = initialName;
+        this.age = age;
         this.weight = 0;
         this.height = 0;
     }
@@ -25,12 +32,22 @@ public class Person {
 
     // Increase age by 1 year
     public void becomeOlder() {
-        this.age = this.age + 1;
+        this.becomeOlder(1);
+    }
+
+    // Increase age by argument
+    public void becomeOlder(int years) {
+        this.age += years;
     }
 
     // Returns true if age >= 18
     public boolean isAdult() {
         return (this.age >= 18);
+    }
+
+    public double weightIndex() {
+        double heightInMeters = this.height / 100.0;
+        return this.weight / (heightInMeters * heightInMeters);
     }
 
     public String getName() {
