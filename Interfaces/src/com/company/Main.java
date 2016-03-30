@@ -36,7 +36,15 @@ public class Main {
         Printer printer = new Printer();
         printer.print(message2);
         printer.print(book2);
+        printLine();
 
+        // NumberList example
+        NumberList joelList = new NumberList();
+        joelList.add(new SMS("bob", "did you write the tests?"));
+        joelList.add(new SMS("joe", "have you looked at the submissions?"));
+        System.out.println("Joel has " + joelList.howManyReadables() + " messages to read");
+
+        // Mike can read for
     }
 
     public static void printLine() {
