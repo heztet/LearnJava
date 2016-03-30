@@ -1,7 +1,6 @@
 import java.awt.Container;
 import java.awt.Dimension;
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
+import javax.swing.*;
 
 // Runnable allows threaded program
 public class UserInterface implements Runnable {
@@ -27,6 +26,10 @@ public class UserInterface implements Runnable {
     }
 
     public void createComponents(Container container) {
+        JLabel text = new JLabel("Text field!");
+        container.add(text);
+        JButton button = new JButton("Click!");
+        container.add(button);
     }
 
     public JFrame getFrame() {
