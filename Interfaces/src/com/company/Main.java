@@ -43,8 +43,6 @@ public class Main {
         joelList.add(new SMS("bob", "did you write the tests?"));
         joelList.add(new SMS("joe", "have you looked at the submissions?"));
         System.out.println("Joel has " + joelList.howManyReadables() + " messages to read");
-
-        // Mike can read for
     }
 
     public static void printLine() {
