@@ -1,17 +1,23 @@
 import java.io.File;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 public class Main {
-
-    public static void main(String[] args) {
-        File file = new File("test.txt");
+    // When writing to a file, function must catch or throw exception
+    public static void main(String[] args) throws Exception{
+        /* File file = new File("test.txt");
 
         try {
             file.createNewFile();
         } catch (Exception e) {
             System.out.println("File could not be written. Error: " + e.getMessage());
         }
+        */
 
+        FileWriter writer = new FileWriter("file.txt");
+        writer.write("Hi file!\n");
+        writer.write("Adding text\n");
+        writer.close(); // Required to close file and write contents
     }
 
     // Returns file contents (with newline chars)
